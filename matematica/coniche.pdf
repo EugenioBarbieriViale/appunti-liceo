@@ -1,0 +1,114 @@
+\documentclass[]{article}
+\usepackage{amsmath, amssymb}
+\usepackage{graphicx}
+
+\title{Circonferenza, Ellisse e Iperbole}
+\author{Eugenio Barbieri Viale}
+\date{24 febbraio 2024}
+
+\begin{document}
+\maketitle
+
+\section{Circonferenza}
+\begin{itemize}
+	\item La circonferenza è il luogo di punti equidistanti da un centro C.
+	\item Forma centro-raggio con centro $C(x_0;y_0$) e raggio r:
+		$$(x-x_0)^2+(y-y_0)^2=r^2$$
+		Forma canonica:
+		$$x^2+y^2+ax+by+c=0$$
+	\item Per la forma canonica:
+		$$C\left(-\frac{a}{2},-\frac{b}{2}\right) \hspace{3em} r=\sqrt{\frac{a^2}{4}+\frac{b^2}{4}-c}$$
+	\item Condizione di realtà:
+		$$\frac{a^2}{4}+\frac{b^2}{4}-c \ge 0$$
+		I coefficienti di $x^2$ e $y^2$, se non sono uguali a 1, devono essere uguali tra loro ma diversi da zero.
+		Se $r=0$ allora la circonferenza è degenere.
+	\item Casi particolari:
+		$$ a=0 \rightarrow \text{Il centro è sull'asse y}$$
+		$$ b=0 \rightarrow \text{Il centro è sull'asse x}$$
+		$$ c=0 \rightarrow \text{La circonferenza passa per l'origine}$$
+		$$ a=0 \wedge c=0 \rightarrow r=C_y$$
+		$$ b=0 \wedge c=0 \rightarrow r=C_x$$
+	\item Posizioni reciproche tra una retta e una circonferenza (d è la distanza tra la retta e il centro):
+		$$\text{Retta esterna:} \hspace{1em} d > r, \hspace{1em} \Delta < 0$$
+		$$\text{Retta tangente:} \hspace{1em} d = r, \hspace{1em} \Delta = 0$$
+		$$\text{Retta secante:} \hspace{1em} d < r, \hspace{1em} \Delta > 0$$
+	\item Per trovare le tangenti passanti per un punto $P(x_0,y_0)\not\in\gamma$ a una circonferenza si può porre $\Delta=0$ oppure porre la distanza retta-centro uguale al raggio. La distanza centro-retta:
+		$$d=\frac{|ax_c+by_c+c|}{\sqrt{a^2+b^2}}$$
+	\item Per trovare le tangenti passanti per un punto $P(x_0,y_0)\in\gamma$ a una circonferenza la retta deve passare per P ed essere perpendicolare al raggio ($m_{raggio} m_{retta}=-1$) oppure si può usare la formula di sdoppiamento, sostituendo $x^2=xx_0$ e $y^2=yy_0$, mentre $x=\frac{x+x_0}{2}$ e  $y=\frac{y+y_0}{2}$. In questo modo:
+		$$xx_0+yy_0+a\frac{x+x_0}{2}+b\frac{y+y_0}{2}+c=0$$
+	\item Le posizioni reciproche tra due circonferenze sono 6: secanti, tangenti interne, tangenti esterne, interne, esterne, concentriche. Le due circonferenze sono concentriche quando hanno uguale a e b. Sottraendo membro a membro le due equazioni, si ottiene una retta detta asse radicale. L'asse radicale passa per i punti di intersezione se le circonferenze sono secanti, per il punto di tangenza se sono tangenti. Inoltre, esso è perpendicolare alla retta passante per i centri.
+	\item Un fascio di circonferenze è la combinazione lineare tra due generatrici. Quella moltiplicata per k è la circonferenza esclusa. L'asse radicale è la circonferenza degenere del fascio. Se il fascio è di circonferenze tangenti, anche il punto base è una circonferenza degenere. L'asse radicale è perpendicolare all'asse centrale, ovvero la retta passante per i centri delle circonferenze.
+\end{itemize}
+
+\section{Ellisse}
+\begin{itemize}
+	\item L'ellisse è il luogo di punti P tali che sia costante la somma delle distanze di P dai due fuochi. In particolare, la somma è uguale a 2a. L'ellisse è la dilatazione di una circonferenza.
+	\item L'equazione:
+		$$\frac{x^2}{a^2}+\frac{y^2}{b^2}=1$$
+		dove $a$ è la metà della distanza dei vertici su $x$, $b$ dei vertici su $y$. La distanza focale è $c$.
+	\item Se i fuochi sono su $x$:
+		$$ a > b \hspace{2em} c^2 = a^2-b^2 \hspace{2em} e=\frac{c}{a}=\frac{\sqrt{a^2-b^2}}{a}$$
+		Se i fuochi sono su y:
+		$$ a < b \hspace{2em} c^2 = b^2-a^2 \hspace{2em} e=\frac{c}{b}=\frac{\sqrt{b^2-a^2}}{b}$$
+	\item L'eccentricità $e$ indica quanto è schiacciata l'ellisse. Maggiore è $e$, maggiore è lo schiacciamento sull'asse maggiore. Inoltre $0 \le e < 1$.
+	\item Le posizione reciproche tra un'ellisse e una retta sono 3: secante, tangente, esterna.
+	\item Per trovare la tangente all'ellisse in suo punto $P(x_0;y_0)\in\gamma$ bisogna usare la formula di sdoppiamento. Si ottiene sostituendo $x^2=xx_0$ e $y^2=yy_0$:
+		$$\frac{xx_0}{a^2}+\frac{yy_0}{b^2}=1$$
+	\item Per trovare le tangenti a un'ellisse passanti per un punto $Q(x_q;y_q)\not\in\gamma$ immaginiamo di far scorrere lungo l'ellisse un punto $P(x_0;y_0)$ insieme alla tangente alla stessa in quel punto. La tangente giusta sarà quella che passerà anche per $Q$. Per fare ciò bisogna risolvere il sistema:
+		\begin{equation}
+			\left\{
+				\begin{aligned}
+					&\frac{x_0^2}{a^2}+\frac{y_0^2}{b^2}=1\\
+					&\frac{x_0x_q}{a^2}+\frac{y_0y_q}{b^2}=1
+				\end{aligned}
+			\right.
+		\end{equation}
+		dove le incognite sono $x_0$ e $y_0$. Una volta risolto si avranno i punti di tangenza. Per trovare le equazioni delle rette, basta imporre il passaggio per P e per Q.
+	\item Un ellisse traslata di vettore $\vec{v}(x_c;y_c)$ ha centro $C(x_c;y_c)$ e ha equazione:
+		$$\frac{(x-x_c)^2}{a^2}+\frac{(y-y_c)^2}{b^2}=1$$
+		Ci si riconduce a questa forma utilizzando il completamento del quadrato.
+	\item L'area racchiusa da un'ellisse è $A=\pi ab$
+\end{itemize}
+
+\section{Iperbole}
+\begin{itemize}
+	\item L'iperbole è il luogo di punti P tali che sia costante la differenza dai due fuochi. In particolare vale 2a.
+	\item L'equazione:
+		$$\frac{x^2}{a^2}-\frac{y^2}{b^2}=1 \hspace{2em} \text{Se i fuochi sono sull'asse x (asse trasverso $2a$)}$$
+		$$\frac{x^2}{a^2}-\frac{y^2}{b^2}=-1 \hspace{2em} \text{Se i fuochi sono sull'asse y (asse trasverso $2b$)}$$
+		Mentre i coefficienti di $x^2$ e $y^2$ nell'ellisse sono concordi, nell'iperbole sono discordi.
+	\item L'asse trasvero è l'asse che contiene i fuochi. Contiene inoltre i vertici detti reali. L'asse non trasvero contiene invece i vertici non reali.
+	\item La semidistanza focale $c$:
+		$$c^2=a^2+b^2$$
+	\item L'eccentricità $e$:
+		$$e=\frac{c}{a}=\frac{\sqrt{a^2+b^2}}{a} \hspace{2em} \text{Se i fuochi sono sull'asse x}$$
+		$$e=\frac{c}{b}=\frac{\sqrt{a^2+b^2}}{b} \hspace{2em} \text{Se i fuochi sono sull'asse y}$$
+		Maggiore è l'eccentricità, maggiormente sono aperti i rami dell'iperbole. Inoltre $e>1$, poichè $c>a>0$
+	\item L'iperbole ha due asintoti passanti per l'origine. Uno passa per $P_1(a,b)$, l'altro passa per $P_2(a,-b)$. La loro equazione è:
+		$$y=\pm\frac{b}{a}x$$
+	\item Le posizioni reciproche tra iperbole e retta sono 4: secante in due punti, tangente, esterna, secante in un punto (la retta è parallela a un asintoto)
+	\item Per trovare le tangenti a un iperbole basta applicare il metodo spiegato con l'ellisse. La formula di sdoppiamento:
+		$$\frac{xx_0}{a^2}-\frac{yy_0}{b^2}=\pm 1$$
+	\item Un'iperbole traslata di vettore $\vec{v}(x_c;y_c)$ ha centro $C(x_c;y_c)$ e ha equazione:
+		$$\frac{(x-x_c)^2}{a^2}-\frac{(y-y_c)^2}{b^2}=\pm 1$$
+	\item Si dice equilatera un'iperbole che ha gli asintoti perpendicolari. Di conseguenza:
+		$$a=b \hspace{3em} e=\sqrt{2} \hspace{3em} \text{Asintoti:} \hspace{1em} y=\pm x$$
+		Gli asintoti sono quindi le bisettrice degli quadranti.
+	\item L'iperbole equilatera si riferisce: agli assi di simmetria, in cui gli asintoti coincidono con le bisettrici dei quadranti, agli asintoti, in cui gli asintoti coincidono con gli assi cartesiani.
+	\item Ruotando in senso antiorario di $45^{\circ}$ l'iperbole equilatera, si ottiene una funzione con dominio $D_0$ ed è chiamata omografica. C'è inoltre proporzionalità inversa tra $x$ e $y$:
+		$$xy=k \hspace{2em} \text{con} \hspace{2em} k=\pm\frac{a^2}{2}$$
+		Le coordinate dei vertici sono $A_1(\sqrt{k};\sqrt{k})$ e $A_2(-\sqrt{k};-\sqrt{k})$
+	\item L'equazione dell'iperbole equilatera riferita agli asintoti (asintoti paralleli a assi cartesiani) è detta funzione omografica:
+		$$y=\frac{ax+b}{cx+d} \hspace {1em} \text{con} \hspace{1em} c\neq0 \hspace{1em} \text{e} \hspace{1em} ad-bc\neq0$$
+		Gli asintoti sono:
+		\begin{align*}
+			&\null x=-\frac{d}{c} \hspace{2em} \text{ovvero il valore di x che annulla il denominatore}\\
+			&\null y=\frac{a}{c} \hspace{2.9em} \text{ovvero il valore di y per} \hspace{0.5em} x\to\infty
+		\end{align*}
+		Il centro di simmetria è:
+		$$C(-\frac{d}{c};\frac{a}{c})$$
+		In realtà si può disegnare ogni funzione omografica facendo a meno del parametro $c$. Dividendo numeratore e denominatore per $c$ e rinominando i parametri si ottiene infatti:
+		$$y=\frac{Ax+B}{x+C}$$
+
+\end{itemize}
+\end{document}
